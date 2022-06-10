@@ -1,0 +1,8 @@
+name: ${PLUGIN_NAME}
+version: "\${version}"
+description: ${PLUGIN_DESCRIPTION}
+author: ${USER}
+main: ${PLUGIN_QUALIFIER}
+load: STARTUP
+api-version: 1.18
+depend: [ "PaperKit" ]

@@ -1,0 +1,9 @@
+#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME}#end
+
+import kotlinx.serialization.Serializable
+
+#parse("File Header.java")
+@Serializable
+data class $NAME(
+    val value: String = TODO()
+)

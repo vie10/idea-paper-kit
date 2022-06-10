@@ -1,0 +1,9 @@
+#set($PLUGIN_NAME = ${StringUtils.removeAndHump(${PROJECT_NAME}, "-")})
+name: ${PLUGIN_NAME}
+version: "\${version}"
+description: "A great plugin based on PaperKit"
+author: ${USER}
+main: ${PLUGIN_QUALIFIER}
+load: STARTUP
+api-version: 1.18
+depend: [ "PaperKit" ]

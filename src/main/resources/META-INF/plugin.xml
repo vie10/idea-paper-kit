@@ -1,0 +1,51 @@
+<idea-plugin>
+    <id>online.viestudio.idea-paper-kit</id>
+    <name>PaperKit</name>
+    <version>1.0.0</version>
+    <description><![CDATA[
+        <h2>PaperKit framework Intellij Idea plugin</h2>
+        <p>The plugin has developed by the PaperKit development team. Especially to speed up the PaperKit based plugins development.</p>
+        <sub>With love 💜 PaperKit.</sub>
+  ]]></description>
+    <vendor email="hrekhviktor@gmail.com" url="https://github.com/paper-kit/">vie10</vendor>
+    <idea-version since-build="221.4842.29" until-build="231.*"/>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.lang</depends>
+    <depends>org.jetbrains.kotlin</depends>
+    <depends>org.jetbrains.plugins.gradle</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <dependencySupport coordinate="com.github.paper-kit:paper-kit" kind="kotlin"/>
+
+        <localInspection language="kotlin"
+                         displayName="Plugin has not plugin.yml config"
+                         groupName="PaperKit"
+                         enabledByDefault="true"
+                         level="WARNING"
+                         hasStaticDescription="true"
+                         implementationClass="online.viestudio.paperkit.inspection.PluginWithoutDescription"/>
+        <codeInsight.lineMarkerProvider language="kotlin"
+                                        implementationClass="online.viestudio.paperkit.insight.ComponentLineMarkerProvider"/>
+        <dependencySupport coordinate="io.papermc.paper:paper-api" kind="java"/>
+        <facetType implementation="online.viestudio.paperkit.facet.KitFacetType"/>
+        <iconProvider order="first" implementation="online.viestudio.paperkit.facet.KitIconProvider"/>
+        <iconProvider order="first" implementation="online.viestudio.paperkit.facet.ComponentIconProvider"/>
+        <library.presentationProvider
+                implementation="online.viestudio.paperkit.presentation.PaperKitPresentationProvider"/>
+        <implicitUsageProvider implementation="online.viestudio.paperkit.usage.PluginUsageProvider"/>
+        <defaultTemplatePropertiesProvider
+                implementation="online.viestudio.paperkit.template.PluginClassPropertiesProvider"/>
+        <defaultTemplatePropertiesProvider
+                implementation="online.viestudio.paperkit.template.PluginConfigPropertiesProvider"/>
+        <framework.detector implementation="online.viestudio.paperkit.facet.KitFacetDetector"/>
+        <moduleBuilder builderClass="online.viestudio.paperkit.module.KitModuleBuilder"/>
+    </extensions>
+
+    <actions>
+        <action id="PaperKitCreateComponent" class="online.viestudio.paperkit.template.CreateComponent"
+                text="PaperKit" description="Creates new PaperKit component">
+            <add-to-group group-id="NewGroup" anchor="after" relative-to-action="NewClass"/>
+        </action>
+    </actions>
+</idea-plugin>

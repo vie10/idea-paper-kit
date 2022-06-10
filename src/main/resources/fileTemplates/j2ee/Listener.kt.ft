@@ -1,0 +1,13 @@
+#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME}#end
+
+import online.viestudio.paperkit.listener.KitListener
+import org.bukkit.event.Event
+import org.bukkit.event.EventHandler
+
+class $NAME : KitListener {
+
+    @EventHandler
+    suspend fun onEvent(event: Event) {
+        TODO()
+    }
+}

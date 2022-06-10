@@ -1,0 +1,26 @@
+#set( $regex = "([a-z])([A-Z]+)")
+#set( $replacement = "$1-$2")
+#set( $PLUGIN_NAME = $PLUGIN_NAME.replaceAll($regex, $replacement).replaceAll(" ", "-").toLowerCase())
+#set( $toDash = $NAME.replaceAll($regex, $replacement).toLowerCase())
+#set ( $commandName = $toDash.replace("-command", ""))
+#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME}#end
+
+import online.viestudio.paperkit.command.Arguments
+import online.viestudio.paperkit.command.ChildCommand
+import org.bukkit.command.CommandSender
+
+#parse("File Header.java")
+class $NAME : ChildCommand(
+    name = "${commandName}",
+    description = "",
+    permission = "${PLUGIN_NAME}.${toDash}"
+) {
+
+    override suspend fun onExecute(sender: CommandSender, args: Arguments): Boolean {
+        TODO()
+    }
+
+    override fun ArgumentsDeclaration.declareArguments() {
+        TODO()
+    }
+}

@@ -1,0 +1,16 @@
+#set( $regex = "([a-z])([A-Z]+)")
+#set( $replacement = "$1-$2")
+#set( $PLUGIN_NAME = $PLUGIN_NAME.replaceAll($regex, $replacement).replaceAll(" ", "-").toLowerCase())
+#set( $toDash = $NAME.replaceAll($regex, $replacement).toLowerCase())
+#set ( $commandName = $toDash.replace("-command", ""))
+#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME}#end
+
+import online.viestudio.paperkit.command.ParentCommand
+
+#parse("File Header.java")
+class $NAME : ParentCommand(
+    name = "${commandName}",
+    description = "",
+    permission = "${PLUGIN_NAME}.${toDash}",
+    subCommands = listOf()
+)
