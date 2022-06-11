@@ -15,7 +15,7 @@ intellij {
     version.set("2022.1.2")
     type.set("IC")
 
-    plugins.set(listOf("org.jetbrains.kotlin", "org.jetbrains.plugins.gradle"))
+    plugins.set(listOf("org.jetbrains.kotlin", "org.jetbrains.plugins.gradle", "com.intellij.java"))
 }
 
 tasks {
