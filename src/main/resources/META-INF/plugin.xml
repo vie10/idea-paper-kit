@@ -16,6 +16,10 @@
     <depends>org.jetbrains.plugins.gradle</depends>
     <depends>com.intellij.java</depends>
 
+    <change-notes><![CDATA[
+        Compatability improvements
+  ]]></change-notes>
+
     <extensions defaultExtensionNs="com.intellij">
         <dependencySupport coordinate="com.github.paper-kit:paper-kit" kind="kotlin"/>
 
