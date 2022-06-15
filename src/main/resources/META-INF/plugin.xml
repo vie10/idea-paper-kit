@@ -1,9 +1,11 @@
 <idea-plugin>
     <id>online.viestudio.idea-paper-kit</id>
     <name>PaperKit</name>
-    <version>1.0.0</version>
+    <version>1.0.2</version>
     <description><![CDATA[
         <h2>PaperKit framework Intellij Idea plugin</h2>
+        <p>Adds new templates and inspections for PaperKit project</p>
+        <p>Also provides a new module named PaperKit for fast creating a new PaperKit plugin project</p>
         <p>The plugin has developed by the PaperKit development team. Especially to speed up the PaperKit based plugins development.</p>
         <sub>With love 💜 PaperKit.</sub>
   ]]></description>
