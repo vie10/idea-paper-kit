@@ -7,14 +7,17 @@
 
 import online.viestudio.paperkit.command.Arguments
 import online.viestudio.paperkit.command.ChildCommand
+import online.viestudio.paperkit.command.CommandConfig
 import org.bukkit.command.CommandSender
 
 #parse("File Header.java")
-class $NAME : ChildCommand(
-    name = "${commandName}",
-    description = "",
-    permission = "${PLUGIN_NAME}.${toDash}"
-) {
+class $NAME : ChildCommand() {
+
+    override val config get() = CommandConfig(
+        name = "${commandName}",
+        description = "",
+        permission = "${PLUGIN_NAME}.${toDash}"
+    )
 
     override suspend fun onExecute(sender: CommandSender, args: Arguments): Boolean {
         TODO()

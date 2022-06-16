@@ -6,11 +6,16 @@
 #if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME}#end
 
 import online.viestudio.paperkit.command.ParentCommand
+import online.viestudio.paperkit.command.CommandConfig
 
 #parse("File Header.java")
 class $NAME : ParentCommand(
-    name = "${commandName}",
-    description = "",
-    permission = "${PLUGIN_NAME}.${toDash}",
     subCommands = listOf()
-)
+) {
+
+    override val config get() = CommandConfig(
+        name = "${commandName}",
+        description = "",
+        permission = "${PLUGIN_NAME}.${toDash}"
+    )
+}

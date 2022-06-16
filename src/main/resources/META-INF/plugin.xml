@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>online.viestudio.idea-paper-kit</id>
     <name>PaperKit</name>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <description><![CDATA[
         <h2>PaperKit framework Intellij Idea plugin</h2>
         <p>Adds new templates and inspections for PaperKit project</p>
@@ -19,7 +19,7 @@
     <depends>com.intellij.java</depends>
 
     <change-notes><![CDATA[
-        Compatability improvements
+        Templates changed to fit the latest conventions of PaperKit framework.
   ]]></change-notes>
 
     <extensions defaultExtensionNs="com.intellij">
