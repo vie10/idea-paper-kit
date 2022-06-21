@@ -2,7 +2,7 @@
 
 # Intellij Idea plugin for [PaperKit](https://github.com/paper-kit/paper-kit) framework
 
-![Version badge](https://img.shields.io/static/v1?label=Version&message=1.0.0&color=red&style=for-the-badge)
+![Version badge](https://img.shields.io/static/v1?label=Version&message=1.0.3&color=red&style=for-the-badge)
 
 This plugin helps to develop PaperKit plugins faster and easier.
 
@@ -19,5 +19,5 @@ This plugin helps to develop PaperKit plugins faster and easier.
 
 ## How to get?
 
-We're in process to add this plugin into JetBrains marketplace, nonetheless you're still able to build it yourself if
-you wish to.
+You can download it from [JetBrains Marketplace](https://plugins.jetbrains.com/plugin/19341-paperkit) or directly in
+your Intellij Idea by searching for "PaperKit".
