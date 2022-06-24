@@ -1,0 +1,11 @@
+<templateSet group="PaperKit">
+    <template name="plugin"
+              value="private val plugin by plugin&lt;online.viestudio.paperkit.plugin.KitPlugin&gt;()"
+              description="Inject PaperKit plugin"
+              toReformat="true"
+              toShortenFQNames="true">
+        <context>
+            <option name="PAPER_KIT_COMPONENT" value="true"/>
+        </context>
+    </template>
+</templateSet>

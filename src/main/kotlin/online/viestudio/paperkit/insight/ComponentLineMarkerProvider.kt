@@ -7,10 +7,12 @@ import com.intellij.psi.PsiElement
 import com.intellij.psi.util.elementType
 import com.intellij.psi.util.findParentOfType
 import online.viestudio.paperkit.asset.MediaAssets.COMMAND_ICON
+import online.viestudio.paperkit.asset.MediaAssets.CONFIG_ICON
 import online.viestudio.paperkit.asset.MediaAssets.LISTENER_ICON
 import online.viestudio.paperkit.asset.MediaAssets.PLUGIN_ICON
 import online.viestudio.paperkit.facet.isNotInFacetModule
 import online.viestudio.paperkit.util.isCommandImplementation
+import online.viestudio.paperkit.util.isConfigImplementation
 import online.viestudio.paperkit.util.isListenerImplementation
 import online.viestudio.paperkit.util.isPluginImplementation
 import org.jetbrains.kotlin.lexer.KtKeywordToken
@@ -39,6 +41,10 @@ class ComponentLineMarkerProvider : LineMarkerProviderDescriptor() {
         } else if (context.isListenerImplementation()) {
             element.newLineMarkerInfo(LISTENER_ICON, "paperkit listener indicator") {
                 "PaperKit listener implementation ${it.className()}"
+            }
+        } else if (context.isConfigImplementation()) {
+            element.newLineMarkerInfo(CONFIG_ICON, "paperkit config indicator") {
+                "PaperKit config implementation ${it.className()}"
             }
         } else null
     }

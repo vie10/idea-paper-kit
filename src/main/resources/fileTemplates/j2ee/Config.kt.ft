@@ -1,9 +1,18 @@
+#set($GETTER = $NAME.substring(0,1).toLowerCase() + $NAME.substring(1))
 #if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME}#end
 
 import kotlinx.serialization.Serializable
+import org.koin.core.component.KoinComponent
+import org.koin.core.component.get
 
 #parse("File Header.java")
 @Serializable
 data class $NAME(
     val value: String = TODO()
-)
+) {
+
+    companion object {
+
+        val KoinComponent.$GETTER get() = get<$NAME>()
+    }
+}

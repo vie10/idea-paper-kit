@@ -1,12 +1,13 @@
 <idea-plugin>
     <id>online.viestudio.idea-paper-kit</id>
     <name>PaperKit</name>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <description><![CDATA[
         <h2>PaperKit framework Intellij Idea plugin</h2>
         <p>Adds new templates and inspections for PaperKit project</p>
         <p>Also provides a new module named PaperKit for fast creating a new PaperKit plugin project</p>
         <p>The plugin has developed by the PaperKit development team. Especially to speed up the PaperKit based plugins development.</p>
+        <p>Find more at the <a href="https://github.com/paper-kit/paper-kit">GitHub</a> repository</p>
         <sub>With love 💜 PaperKit.</sub>
   ]]></description>
     <vendor email="hrekhviktor@gmail.com" url="https://github.com/paper-kit/">vie10</vendor>
@@ -19,12 +20,10 @@
     <depends>com.intellij.java</depends>
 
     <change-notes><![CDATA[
-        Templates changed to fit the latest conventions of PaperKit framework.
+        New templates, config icons
   ]]></change-notes>
 
     <extensions defaultExtensionNs="com.intellij">
-        <dependencySupport coordinate="com.github.paper-kit:paper-kit" kind="kotlin"/>
-
         <localInspection language="kotlin"
                          displayName="Plugin has not plugin.yml config"
                          groupName="PaperKit"
@@ -35,18 +34,26 @@
         <codeInsight.lineMarkerProvider language="kotlin"
                                         implementationClass="online.viestudio.paperkit.insight.ComponentLineMarkerProvider"/>
         <dependencySupport coordinate="io.papermc.paper:paper-api" kind="java"/>
+        <dependencySupport coordinate="com.github.paper-kit:paper-kit" kind="kotlin"/>
+        <dependencySupport coordinate="com.github.paper-kit:paper-kit" kind="java"/>
+
         <facetType implementation="online.viestudio.paperkit.facet.KitFacetType"/>
         <iconProvider order="first" implementation="online.viestudio.paperkit.facet.KitIconProvider"/>
         <iconProvider order="first" implementation="online.viestudio.paperkit.facet.ComponentIconProvider"/>
         <library.presentationProvider
                 implementation="online.viestudio.paperkit.presentation.PaperKitPresentationProvider"/>
         <implicitUsageProvider implementation="online.viestudio.paperkit.usage.PluginUsageProvider"/>
+        <implicitUsageProvider implementation="online.viestudio.paperkit.usage.EventHandlerUsageProvider"/>
+
         <defaultTemplatePropertiesProvider
                 implementation="online.viestudio.paperkit.template.PluginClassPropertiesProvider"/>
         <defaultTemplatePropertiesProvider
                 implementation="online.viestudio.paperkit.template.PluginConfigPropertiesProvider"/>
+
         <framework.detector implementation="online.viestudio.paperkit.facet.KitFacetDetector"/>
         <moduleBuilder builderClass="online.viestudio.paperkit.module.KitModuleBuilder"/>
+        <liveTemplateContext implementation="online.viestudio.paperkit.liveTemplates.ComponentContext"/>
+        <defaultLiveTemplates file="/liveTemplates/PaperKit.xml"/>
     </extensions>
 
     <actions>
