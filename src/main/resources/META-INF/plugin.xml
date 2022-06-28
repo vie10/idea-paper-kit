@@ -20,7 +20,8 @@
     <depends>com.intellij.java</depends>
 
     <change-notes><![CDATA[
-        New templates, config icons
+        Now methods annotated with @EventListener have implicit usage.
+        Classes annotated with @Serializable have config icon.
   ]]></change-notes>
 
     <extensions defaultExtensionNs="com.intellij">
