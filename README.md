@@ -2,7 +2,7 @@
 
 # Intellij Idea plugin for [PaperKit](https://github.com/paper-kit/paper-kit) framework
 
-![Version badge](https://img.shields.io/static/v1?label=Version&message=1.0.3&color=red&style=for-the-badge)
+![Version badge](https://img.shields.io/static/v1?label=Version&message=1.0.4&color=red&style=for-the-badge)
 
 This plugin helps to develop PaperKit plugins faster and easier.
 
