@@ -1,24 +1,5 @@
 #if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME}#end
 
-import online.viestudio.paperkit.command.CommandsDeclaration
-import online.viestudio.paperkit.config.ConfigurationDeclaration
-import online.viestudio.paperkit.plugin.BaseKitPlugin
+import online.viestudio.paperkit.plugin.AnnotationDrivenPlugin
 
-class $NAME : BaseKitPlugin() {
-
-    override suspend fun onStart() {
-        TODO()
-    }
-
-    override suspend fun onStop() {
-        TODO()
-    }
-
-    override fun CommandsDeclaration.declareCommands() {
-        TODO()
-    }
-
-    override fun ConfigurationDeclaration.declareConfiguration() {
-        TODO()
-    }
-}
+class $NAME : AnnotationDrivenPlugin()

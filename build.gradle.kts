@@ -1,18 +1,18 @@
 plugins {
     java
-    kotlin("jvm") version "1.6.21"
-    id("org.jetbrains.intellij") version "1.6.0"
+    kotlin("jvm") version "1.7.10"
+    id("org.jetbrains.intellij") version "1.7.0"
 }
 
 group = "online.viestudio"
-version = "1.0.4"
+version = "1.1.0"
 
 repositories {
     mavenCentral()
 }
 
 intellij {
-    version.set("2022.1.2")
+    version.set("2022.2")
     type.set("IC")
 
     plugins.set(listOf("org.jetbrains.kotlin", "org.jetbrains.plugins.gradle", "com.intellij.java"))
@@ -20,12 +20,12 @@ intellij {
 
 tasks {
     withType<JavaCompile> {
-        sourceCompatibility = "11"
-        targetCompatibility = "11"
+        sourceCompatibility = "17"
+        targetCompatibility = "17"
     }
 
     withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-        kotlinOptions.jvmTarget = "11"
+        kotlinOptions.jvmTarget = "17"
     }
 
     build {
@@ -33,7 +33,7 @@ tasks {
     }
 
     patchPluginXml {
-        sinceBuild.set("221.4842.29")
+        sinceBuild.set("222.3345.118")
         untilBuild.set("231.*")
     }
 
