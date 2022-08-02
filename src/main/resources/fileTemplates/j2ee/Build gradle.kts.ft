@@ -22,6 +22,14 @@ dependencies {
     compileOnly(kotlin("stdlib")) // It's provided in PaperKit jar.
 }
 
+sourceSets {
+    main {
+        java {
+            srcDir(file("build/generated/ksp/main/kotlin"))
+        }
+    }
+}
+
 with(tasks) {
     processResources {
         val properties = linkedMapOf(
