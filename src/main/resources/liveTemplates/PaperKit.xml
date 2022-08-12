@@ -8,4 +8,22 @@
             <option name="PAPER_KIT_COMPONENT" value="true"/>
         </context>
     </template>
+    <template name="commandConfig" value="CommandConfig(&#10;        name = &quot;$NAME$&quot;,&#10;        description = &quot;$DESCRIPTION$&quot;,&#10;        permission = &quot;$PERMISSION$&quot;,&#10;)" description="Command config live template" toReformat="true" toShortenFQNames="true">
+        <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+        <variable name="DESCRIPTION" expression="" defaultValue="" alwaysStopAt="true" />
+        <variable name="PERMISSION" expression="" defaultValue="$NAME" alwaysStopAt="true" />
+        <context>
+            <option name="KOTLIN_EXPRESSION" value="true" />
+            <option name="KOTLIN_STATEMENT" value="true" />
+        </context>
+    </template>
+    <template name="argumentConfig" value="&quot;$ID$&quot; to ArgumentConfig(&#10;    name = &quot;$NAME$&quot;,&#10;    description = splitLines(&quot;$DESCRIPTION$&quot;),&#10;)" description="Command config live template" toReformat="true" toShortenFQNames="true">
+        <variable name="ID" expression="" defaultValue="" alwaysStopAt="true" />
+        <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+        <variable name="DESCRIPTION" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="KOTLIN_EXPRESSION" value="true" />
+            <option name="KOTLIN_STATEMENT" value="true" />
+        </context>
+    </template>
 </templateSet>
