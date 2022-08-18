@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>online.viestudio.idea-paper-kit</id>
     <name>PaperKit</name>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
     <description><![CDATA[
         <h2>PaperKit framework Intellij Idea plugin</h2>
         <p>Adds new templates and inspections for PaperKit project</p>
@@ -20,7 +20,7 @@
     <depends>com.intellij.java</depends>
 
     <change-notes><![CDATA[
-        Support for AnnotationDrivenPlugin (gradle-paper-kit).
+        New live templates.
   ]]></change-notes>
 
     <extensions defaultExtensionNs="com.intellij">
