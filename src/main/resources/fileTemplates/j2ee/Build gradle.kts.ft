@@ -15,9 +15,9 @@ repositories {
 }
 
 dependencies {
-    compileOnly("com.github.paper-kit", "paper-kit", "2.2.0")
-    compileOnly("com.github.paper-kit", "gradle-paper-kit", "2.2.0")
-    ksp("com.github.paper-kit", "gradle-paper-kit", "2.2.0")
+    compileOnly("com.github.paper-kit", "paper-kit", "4.0.0")
+    compileOnly("com.github.paper-kit", "gradle-paper-kit", "4.0.0")
+    ksp("com.github.paper-kit", "gradle-paper-kit", "4.0.0")
     @Suppress("DependencyOnStdlib")
     compileOnly(kotlin("stdlib")) // It's provided in PaperKit jar.
 }

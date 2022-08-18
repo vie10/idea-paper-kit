@@ -21,6 +21,7 @@
 
     <change-notes><![CDATA[
         New live templates.
+        PaperKit 4.0.0.
   ]]></change-notes>
 
     <extensions defaultExtensionNs="com.intellij">
